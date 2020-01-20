@@ -1,7 +1,12 @@
 import React from "react";
 import './ResultPage.css';
+import {Redirect} from "react-router-dom";
 
 const ResultPage = (props) => {
+
+    if (props.redirect) {
+        return <Redirect to={'/test'}/>
+    }
 
     let correctAnswers = ['2560', 'В Китае', {name1: 'Менделеев Д.И.', name2: 'Никола Тесла'  }, 'Колизей', 'Помпеи'];
 debugger
@@ -35,7 +40,7 @@ debugger
             <div>Правильные ответы:<ol>
                                        <li>{correctAnswer1}</li>
                                        <li>{correctAnswer2}</li>
-                                       <li>{correctAnswer3},{correctAnswer4}</li>
+                                       <li>{correctAnswer3},&nbsp;{correctAnswer4}</li>
                                        <li>{correctAnswer5}</li>
                                        <li>{correctAnswer6}</li>
                                    </ol>
@@ -43,9 +48,6 @@ debugger
         </div>
     )
 };
-
-
-
 
 
 export default ResultPage;

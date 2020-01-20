@@ -3,12 +3,13 @@ import TextInput from "./TextInput";
 import RadioButton from "./RadioButton";
 import {Redirect} from "react-router-dom";
 import Modal from "../modalWindow/ModalWindow";
+import  "../modalWindow/Button.css";
 import Checkbox from "./Checkbox";
 import Select from "./Select";
 import RadioButton2 from "./RadioButton2";
 
 
-const PageQuestion = (props) => {
+const PageQuestions = (props) => {
         debugger
         if (props.redirect) {
             return <Redirect to={'/result'}/>
@@ -32,7 +33,7 @@ const PageQuestion = (props) => {
                     <RadioButton2 result6={props.result6} onRadioButtonChange2={props.onRadioButtonChange2}/>
                 </div>
                 <div className="container">
-                    <button onClick={props.openResult}>Ответить</button>
+                    <button className='btn' onClick={props.openResult}>Ответить</button>
                 </div>
                 <Modal isOpen={props.isOpen} setIsCloseModal={props.setIsCloseModal}/>
                 {/*<div>
@@ -44,4 +45,4 @@ const PageQuestion = (props) => {
 
 
 
-export default PageQuestion;
+export default PageQuestions;

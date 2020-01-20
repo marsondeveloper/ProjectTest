@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import PageQuestion from "./components/pageQuestions/PageQuestion";
+import PageQuestions from "./components/pageQuestions/PageQuestions";
 import {BrowserRouter, Redirect, Route} from "react-router-dom";
 import ResultPage from "./components/resultPage/ResultPage";
 import RadioButton from "./components/pageQuestions/RadioButton";
@@ -18,6 +18,7 @@ class App extends React.Component {
         isOpen: false,
         redirect: false
     };
+
 
     isRedirectYes = () => {
         this.setState({
@@ -71,16 +72,17 @@ class App extends React.Component {
         })
     };
     openResult = () => {
-        if (this.state.result1 === "" || this.state.result2 === "") {
+        debugger
+        if (this.state.result1 === "" && this.state.result2 === "" && this.state.result3 === "" && this.state.result4 === "" && this.state.result5 === "" && this.state.result6 ) {
             return this.setIsOpenModal()
         }else{
              return this.isRedirectYes()
         }
     };
-    clearAllFields = () => {
+    clearAllFields = (e) => {
         this.setState({
             result1: "",
-            result2: "",
+            result: "",
             result3: "",
             result4: "",
             result5: ""
@@ -94,25 +96,26 @@ class App extends React.Component {
             <div className="app-wrapper">
                     <div className='header'><h1>Тест по Всемирной истории</h1></div>
                     <div className='app-wrapper-content'>
-                        <Route path='/test' render={() => <PageQuestion redirect={this.state.redirect}
-                                                                        result1={this.state.result1}
-                                                                        result2={this.state.result2}
-                                                                        result3={this.state.result3}
-                                                                        result4={this.state.result4}
-                                                                        result5={this.state.result5}
-                                                                        result6={this.state.result6}
-                                                                        onInputChange={this.onInputChange}
-                                                                        isOpen={this.state.isOpen}
-                                                                        onRadioButtonChange={this.onRadioButtonChange}
-                                                                        onRadioButtonChange2={this.onRadioButtonChange2}
-                                                                        setIsCloseModal={this.setIsCloseModal}
-                                                                        openResult={this.openResult}
-                                                                        onCheckboxChange1={this.onCheckboxChange1}
-                                                                        onCheckboxChange2={this.onCheckboxChange2}
-                                                                        clearAllFields={this.clearAllFields}
-                                                                        onSelectChange={this.onSelectChange}/>}/>
+                        <Route path='/test' render={() => <PageQuestions redirect={this.state.redirect}
+                                                                         result1={this.state.result1}
+                                                                         result2={this.state.result2}
+                                                                         result3={this.state.result3}
+                                                                         result4={this.state.result4}
+                                                                         result5={this.state.result5}
+                                                                         result6={this.state.result6}
+                                                                         onInputChange={this.onInputChange}
+                                                                         isOpen={this.state.isOpen}
+                                                                         onRadioButtonChange={this.onRadioButtonChange}
+                                                                         onRadioButtonChange2={this.onRadioButtonChange2}
+                                                                         setIsCloseModal={this.setIsCloseModal}
+                                                                         openResult={this.openResult}
+                                                                         onCheckboxChange1={this.onCheckboxChange1}
+                                                                         onCheckboxChange2={this.onCheckboxChange2}
+                                                                         clearAllFields={this.clearAllFields}
+                                                                         onSelectChange={this.onSelectChange}/>}/>
 
-                        <Route path='/result' render={() => <ResultPage result1={this.state.result1}
+                        <Route path='/result' render={() => <ResultPage
+                                                                        result1={this.state.result1}
                                                                         result2={this.state.result2}
                                                                         result3={this.state.result3}
                                                                         result4={this.state.result4}
