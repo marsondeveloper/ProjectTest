@@ -1,22 +1,31 @@
-.App {
+.app-wrapper{
+  margin: 0 auto;
+  display: grid;
+  width: 1200px;
+
+  grid-template-areas:
+          'h h'
+          'n c';
+
+
+}
+
+.app-wrapper-content {
+  grid-area: c;
+  width: 1200px;
+  background: orange;
+}
+
+
+.header {
+  grid-area: h;
+  background-image: url('https://wp-lessons.com/wp-content/uploads/2014/07/28-660x330.jpg.pagespeed.ce.HorBNg8wYi.jpg');
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.container {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #09d3ac;
-}
+
