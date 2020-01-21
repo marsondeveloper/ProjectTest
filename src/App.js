@@ -73,7 +73,7 @@ class App extends React.Component {
     };
     openResult = () => {
         debugger
-        if (this.state.result1 === "" && this.state.result2 === "" && this.state.result3 === "" && this.state.result4 === "" && this.state.result5 === "" && this.state.result6 ) {
+        if (this.state.result1 === "" || this.state.result2 === "" || this.state.result3 === "" || this.state.result4 === "" || this.state.result5 === "" || this.state.result6 === "") {
             return this.setIsOpenModal()
         }else{
              return this.isRedirectYes()

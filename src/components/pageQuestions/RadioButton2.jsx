@@ -8,10 +8,10 @@ const RadioButton2 = (props) => {
     return(
         <div>
             <div><strong>{props.title}</strong></div>
-            <p><input name="test" type="radio" value='Александрия' onChange={props.onRadioButtonChange2}/>Александрия</p>
-            <p><input name="test" type="radio" value='Помпеи' onChange={props.onRadioButtonChange2}/>Помпеи</p>
-            <p><input name="test" type="radio" value='Мессина' onChange={props.onRadioButtonChange2}/>Мессина</p>
-            <p><input name="test" type="radio" value='Рим' onChange={props.onRadioButtonChange2}/>Рим</p>
+            <p><input name="radio" type="radio" value='Александрия' onChange={props.onRadioButtonChange2}/>Александрия</p>
+            <p><input name="radio" type="radio" value='Помпеи' onChange={props.onRadioButtonChange2}/>Помпеи</p>
+            <p><input name="radio" type="radio" value='Мессина' onChange={props.onRadioButtonChange2}/>Мессина</p>
+            <p><input name="radio" type="radio" value='Рим' onChange={props.onRadioButtonChange2}/>Рим</p>
         </div>
     )
 };
