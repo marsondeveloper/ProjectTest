@@ -3,15 +3,14 @@ import './App.css';
 import PageQuestions from "./components/pageQuestions/PageQuestions";
 import {BrowserRouter, Redirect, Route} from "react-router-dom";
 import ResultPage from "./components/resultPage/ResultPage";
-import RadioButton from "./components/pageQuestions/RadioButton";
-import Modal from "./components/modalWindow/ModalWindow";
+
 
 
 class App extends React.Component {
     state = {
         result1: '',
         result2: '',
-        result3: '',
+        result3: [],
         result4: '',
         result5: '',
         result6: '',
@@ -46,7 +45,7 @@ class App extends React.Component {
             result3: e.target.value
         })
     };
-    onCheckboxChange2 = (e) => {
+   onCheckboxChange2 = (e) => {
         this.setState({
             result4: e.target.value
         })

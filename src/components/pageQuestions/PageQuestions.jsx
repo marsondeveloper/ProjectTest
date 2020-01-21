@@ -9,6 +9,7 @@ import Select from "./Select";
 import RadioButton2 from "./RadioButton2";
 
 
+
 const PageQuestions = (props) => {
         debugger
         if (props.redirect) {
@@ -18,7 +19,7 @@ const PageQuestions = (props) => {
         return (
             <div>
                 <div className="container">
-                    <TextInput result1={props.result1} onInputChange={props.onInputChange}/>
+                    <TextInput result1={props.result} onInputChange={props.onInputChange}/>
                 </div>
                 <div className="container">
                     <RadioButton result2={props.result2} onRadioButtonChange={props.onRadioButtonChange}/>
@@ -42,6 +43,8 @@ const PageQuestions = (props) => {
             </div>
         )
     };
+
+
 
 
 

@@ -9,6 +9,7 @@ import {NavLink, Redirect} from "react-router-dom";
 const Modal = (props) => {
 debugger
 
+
     return(
         <>
             { props.isOpen &&

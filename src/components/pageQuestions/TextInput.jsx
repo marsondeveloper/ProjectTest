@@ -19,7 +19,6 @@ debugger
 
 TextInput.propTypes = {
     title: PropTypes.string,
-
 };
 
 TextInput.defaultProps = {
