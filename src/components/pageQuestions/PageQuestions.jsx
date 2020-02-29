@@ -1,51 +1,57 @@
-import React from "react";
+import React, {Component} from "react";
 import TextInput from "./TextInput";
 import RadioButton from "./RadioButton";
-import {Redirect} from "react-router-dom";
 import Modal from "../modalWindow/ModalWindow";
-import  "../modalWindow/Button.css";
+import "../modalWindow/Button.css";
 import Checkbox from "./Checkbox";
 import Select from "./Select";
 import RadioButton2 from "./RadioButton2";
+import {Redirect} from "react-router-dom";
 
 
+class PageQuestions extends Component {
 
-const PageQuestions = (props) => {
-        debugger
-        if (props.redirect) {
-            return <Redirect to={'/result'}/>
-        }
-
-        return (
-            <div>
-                <div className="container">
-                    <TextInput result1={props.result} onInputChange={props.onInputChange}/>
-                </div>
-                <div className="container">
-                    <RadioButton result2={props.result2} onRadioButtonChange={props.onRadioButtonChange}/>
-                </div>
-                <div className="container">
-                    <Checkbox result3={props.result3} result4={props.result4} onCheckboxChange1={props.onCheckboxChange1} onCheckboxChange2={props.onCheckboxChange2}/>
-                </div>
-                <div className="container">
-                    <Select result5={props.result5} onSelectChange={props.onSelectChange}/>
-                </div>
-                <div className="container">
-                    <RadioButton2 result6={props.result6} onRadioButtonChange2={props.onRadioButtonChange2}/>
-                </div>
-                <div className="container">
-                    <button className='btn' onClick={props.openResult}>Ответить</button>
-                </div>
-                <Modal isOpen={props.isOpen} setIsCloseModal={props.setIsCloseModal}/>
-                {/*<div>
-                    <button onClick={props.clearAllFields}>Очистить все поля</button>
-                </div>*/}
-            </div>
-        )
+    state = {
+        pointsCheckbox: []
     };
 
+    addPointCheckbox = (ball, i, index) => {
+        const arr = [...this.state.pointsCheckbox];
+        arr[i] = ball;
+            this.setState({pointsCheckbox: arr}
+            );
+            let point = arr.reduce((a,currentItem) => typeof currentItem === 'number' ? a + currentItem : a, 0);
+            this.props.addPoint(index, point)
+        };
 
+         questions = this.props.data.map((e, i) => <div key={i} className="container">
+                <strong>{i+1+"."}{e.question}</strong>
+                <TextInput addPoint={this.props.addPoint} index={i} input={e.input}/>
 
+                <RadioButton radiobutton={e.radiobutton} index={i} addPoint={this.props.addPoint}/>
+
+                <Checkbox checkbox={e.checkbox} index={i} addPointCheckbox={this.addPointCheckbox}/>
+
+                <Select select={e.select} index={i} correctAnswer={e.correctAnswer} addPoint={this.props.addPoint}/>
+
+                <RadioButton2 radiobutton2={e.radiobutton2} index={i} addPoint={this.props.addPoint}/>
+            </div>
+        );
+    render() {
+        if (this.props.state.redirect) {
+            return <Redirect to={'/result'}/>
+        }
+        return (
+            <div>
+                {this.questions}
+                <div className="container">
+                    <button className='btn' onClick={this.props.result}>Ответить</button>
+                </div>
+                <Modal isOpen={this.props.state.isOpen} setIsCloseModal={this.props.setIsCloseModal}/>
+            </div>
+        )
+    }
+}
 
 
 export default PageQuestions;

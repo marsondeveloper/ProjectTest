@@ -1,26 +1,29 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-
-
+import React, {useState} from "react";
 
 const Checkbox = (props) => {
-  return(
-      <div><strong>{props.title}</strong>
-          <p><input type="checkbox" name="a" value="Виктор Цой" onChange={props.onCheckboxChange1}/> Виктор Цой</p>
-          <p><input type="checkbox" name="a" value="Менделеев Д.И." onChange={props.onCheckboxChange2}/> Менделеев Д.И.</p>
-          <p><input type="checkbox" name="a" value="Наполеон Бонапарт" onChange={props.onCheckboxChange1}/> Наполеон Бонапарт</p>
-          <p><input type="checkbox" name="a" value="Никола Тесла" onChange={props.onCheckboxChange1}/> Никола Тесла</p>
-      </div>
-  )
+
+    const [checkbox, setChecked] = useState([]);
+
+    let onChangeCheckbox = ({target: {checked}}, i, point) => {
+        setChecked([checked]);
+        let check = checked ? point : 0;
+        props.addPointCheckbox(check, i, props.index)
+    };
+
+    if (!props.checkbox) {
+        return null
+    }
+
+    let result = props.checkbox.map((q, i) => <div key={i}><label><input type="checkbox" name={q.name} value={q.answer}
+                                                                         onChange={(e) => onChangeCheckbox(e, i, q.bal)}/>{q.answer}
+    </label><br/></div>);
+
+    return (
+        <div>
+            {result}
+        </div>
+    )
 };
 
-Checkbox.propTypes = {
-    title: PropTypes.string
-};
-
-Checkbox.defaultProps = {
-    title: "3.Выберите двух выдающихся учёных конец 19-го и начало 20-го веков."
-};
 
 export default Checkbox;

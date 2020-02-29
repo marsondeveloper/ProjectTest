@@ -1,32 +1,41 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, {Component} from "react";
 import photo from "../../images/depositphotos_28907987-stock-photo-colosseum-in-rome.jpg"
 
 
-const Select = (props) => {
-    debugger
-    return(
-        <div>
-            <p><strong>{props.title}</strong></p>
-            <img src={photo}/>
+class Select extends Component {
+    state = {
+        select: ''
+    };
+
+    onChangeSelect = (e, correctAnswer) => {
+        const {name, value} = e.target;
+        this.setState({
+            [name]: value
+        });
+        let point = value === correctAnswer ? 1 : 0;
+        this.props.addPoint(this.props.index, point)
+    };
+
+    onChange = (e) => {
+        this.onChangeSelect(e, this.props.correctAnswer)
+    };
+    render() {
+        if (!this.props.select) {
+            return null
+        }
+        let result = this.props.select.map((q, i) => <option key={i} value={q.answer}>{q.answer}</option>);
+        return (
             <div>
-            <select name="test" value={props.result5} onChange={props.onSelectChange}>
-                <option value="Пантион">Пантион</option>
-                <option value="Великий Манеж">Великий Манеж</option>
-                <option value="Колизей">Колизей</option>
-                <option value="Большой цирк">Большой цирк</option>
-            </select>
+                <img src={photo}/>
+                <div>
+                    <select name="select" value={this.state.select} onChange={this.onChange}>
+                        {result}
+                    </select>
                 </div>
-        </div>
-    )
-};
+            </div>
+        )
+    }
+}
 
-Select.propTypes = {
-    title: PropTypes.string
-};
-
-Select.defaultProps = {
-    title: "4.Сейчас это здание представляет собой руины. А при его открытии в 80 году н.э., это был самый большой римский стадион. Как он называется?"
-};
 
 export default Select;

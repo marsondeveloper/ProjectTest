@@ -13,13 +13,30 @@
 .app-wrapper-content {
   grid-area: c;
   width: 1200px;
-  background: orange;
+  background-color: lightgray;
+  background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
+  background-image: -webkit-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+  -webkit-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+  -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+  -webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-image: -moz-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+  -moz-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+  -moz-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+  -moz-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+  linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+  linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
 }
 
 
 .header {
   grid-area: h;
-  background-image: url('https://wp-lessons.com/wp-content/uploads/2014/07/28-660x330.jpg.pagespeed.ce.HorBNg8wYi.jpg');
+  background-size: 50px 50px;
+  background-color: orange;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+  background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   text-align: center;
 }
 

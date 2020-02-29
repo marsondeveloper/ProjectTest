@@ -1,28 +1,34 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, {Component} from "react";
 
 
+class RadioButton2 extends Component {
+    state = {
+        radiobutton: ''
+    };
 
-const RadioButton2 = (props) => {
-    debugger
-    return(
-        <div>
-            <div><strong>{props.title}</strong></div>
-            <p><input name="radio" type="radio" value='Александрия' onChange={props.onRadioButtonChange2}/>Александрия</p>
-            <p><input name="radio" type="radio" value='Помпеи' onChange={props.onRadioButtonChange2}/>Помпеи</p>
-            <p><input name="radio" type="radio" value='Мессина' onChange={props.onRadioButtonChange2}/>Мессина</p>
-            <p><input name="radio" type="radio" value='Рим' onChange={props.onRadioButtonChange2}/>Рим</p>
-        </div>
-    )
-};
+    onChangeRadio = (e) => {
+        const {name, value} = e.target;
+        this.setState({
+            [name]: value
+        });
+        this.props.addPoint(this.props.index, +value)
+    };
+    render() {
+        if (!this.props.radiobutton2) {
+            return null
+        }
+        let result = this.props.radiobutton2.map((q, i) => <div key={i}><label><input name="radiobutton2" type="radio"
+                                                                                      value={q.bal}
+                                                                                      onChange={this.onChangeRadio}/>{q.answer}
+        </label></div>);
 
-RadioButton2.propTypes = {
-    title: PropTypes.string,
+        return (
+            <div>
+                {result}
+            </div>
+        )
+    }
+}
 
-};
-
-RadioButton2.defaultProps = {
-    title: "5.Древнеримский город недалеко от Неаполя, в регионе Кампания, погребённый под слоем вулканического пепла в результате извержения Везувия 24 августа 79 года?"
-};
 
 export default RadioButton2;

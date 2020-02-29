@@ -4,6 +4,10 @@
     text-align: center
 }
 
-.sum {
-    font-weight: bold;
+
+.win {
+    color: green;
+    font-size: 250%;
+    text-align: center;
+    text-transform: uppercase;
 }

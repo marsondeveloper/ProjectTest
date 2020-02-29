@@ -1,28 +1,33 @@
-import React from "react";
-import Modal from "../modalWindow/ModalWindow";
-import PropTypes from "prop-types";
+import React, {Component} from "react";
 
 
+class RadioButton extends Component {
+     state = {
+         radiobutton: ''
+     };
 
-const RadioButton = (props) => {
-debugger
-    return(
-        <div>
-            <div><strong>{props.title}</strong></div>
-            <div><p><input name="test" type="radio" value='В Китае' onChange={props.onRadioButtonChange}/>В Китае</p></div>
-            <div><p><input name="test" type="radio" value='В США' onChange={props.onRadioButtonChange}/>В США</p></div>
-            <div><p><input name="test" type="radio" value='В Украине' onChange={props.onRadioButtonChange}/>В Украине</p></div>
-        </div>
-    )
-};
 
-RadioButton.propTypes = {
-    title: PropTypes.string,
+    onChangeRadio = (e) => {
+        const {name, value} = e.target;
+        this.setState({
+            [name]: value
+        });
+        this.props.addPoint(this.props.index, +value)
+    };
+    render() {
+        if (!this.props.radiobutton) {
+            return null
+        }
 
-};
+        let result = this.props.radiobutton.map((q, i) => <div key={i}><label><input name='radiobutton' type='radio' value={q.bal} onChange={this.onChangeRadio}/>{q.answer}
+        </label></div>);
+        return (
+            <div>
+                <div>{result}</div>
+            </div>
+        )
+    }
+}
 
-RadioButton.defaultProps = {
-    title: "2.Где была построена самая длинная стена в мире?"
-};
 
 export default RadioButton;

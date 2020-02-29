@@ -1,28 +1,36 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, {Component} from "react";
 
 
+class TextInput extends Component{
+    state = {
+        textInput: ''
+    };
 
+    onChangeText = (e, answer) => {
+        const {name, value} = e.target;
+        this.setState({
+            [name]: value
+        });
+        const point = value === answer || value === '' ? 1 : 0;
+        this.props.addPoint(this.props.index, point)
+    };
 
+    onChange = (e) => {
+      this.onChangeText(e, this.props.input.text)
+    };
 
-const TextInput = (props) => {
-debugger
-
-    return(
-        <div>
-            <div><strong>{props.title}</strong>
-                <div><p><input placeholder={"Введите ответ"} type="text" value={props.result1} onChange={props.onInputChange}/></p></div>
+    render() {
+        if (!this.props.input) {
+            return null
+        }
+        return (
+            <div>
+                <div><p><input placeholder={"Введите ответ"} name="textInput" type="text" value={this.state.textInput}
+                               onChange={this.onChange}/></p></div>
             </div>
-        </div>
-    )
-};
+        )
+    }
+}
 
-TextInput.propTypes = {
-    title: PropTypes.string,
-};
-
-TextInput.defaultProps = {
-    title: "1.В каком году до нашей эры построили пирамиду Хеопса?"
-};
 
 export default TextInput;
