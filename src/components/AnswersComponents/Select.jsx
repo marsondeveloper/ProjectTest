@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import photo from "../../images/depositphotos_28907987-stock-photo-colosseum-in-rome.jpg"
+
 
 
 class Select extends Component {
@@ -26,7 +26,6 @@ class Select extends Component {
         let result = this.props.select.map((q, i) => <option key={i} value={q.answer}>{q.answer}</option>);
         return (
             <div>
-                <img src={photo}/>
                 <div>
                     <select name="select" value={this.state.select} onChange={this.onChange}>
                         {result}

@@ -1,7 +1,7 @@
 import React from 'react';
-import PageQuestions from "./pageQuestions/PageQuestions";
+import PageQuestions from "../PageQuestions/PageQuestions";
 import {Route} from "react-router-dom";
-import ResultPage from "./resultPage/ResultPage";
+import ResultPage from "../ResultPage/ResultPage";
 
 
 class MainComponent extends React.Component {
@@ -51,6 +51,10 @@ class MainComponent extends React.Component {
             }]
         },
         {
+            question: ' Какой народ в древности стал изготавливать впервые сахар из сахарного тростника?',
+            select: [{answer: 'Египтяне'}, {answer: 'Финикийцы'}, {answer: 'Индийцы'}, {answer: 'Китайцы'}], correctAnswer: 'Индийцы'
+        },
+        {
             question: 'Выберите двух выдающихся учёных конец 19-го и начало 20-го веков.',
             checkbox: [{id: 0, answer: 'Виктор Цой', name:'Victor', bal: 0}, {id: 1, answer: 'Менделеев Д.И.', name:'Mendeleev', bal: 0.5},
                        {id: 2, answer: 'Наполеон Бонапарт', name:'Napoleon', bal: 0}, {id: 3, answer: 'Никола Тесла', name:'Tesla', bal: 0.5}]
@@ -61,7 +65,7 @@ class MainComponent extends React.Component {
         },
         {
             question: 'Древнеримский город недалеко от Неаполя, в регионе Кампания, погребённый под слоем вулканического пепла в результате извержения Везувия 24 августа 79 года?',
-            radiobutton2: [{answer: 'Александрия', bal: 0}, {
+            radiobutton: [{answer: 'Александрия', bal: 0}, {
                 answer: 'Помпеи',
                 bal: 1
             }, {answer: 'Мессина', bal: 0}, {answer: 'Рим', bal: 0}]

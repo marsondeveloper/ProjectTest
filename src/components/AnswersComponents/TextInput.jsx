@@ -11,7 +11,7 @@ class TextInput extends Component{
         this.setState({
             [name]: value
         });
-        const point = value === answer || value === '' ? 1 : 0;
+        const point = value === answer ? 1 : 0;
         this.props.addPoint(this.props.index, point)
     };
 

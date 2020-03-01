@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import PageQuestions from "./components/pageQuestions/PageQuestions";
-import {BrowserRouter, Redirect, Route} from "react-router-dom";
-import ResultPage from "./components/resultPage/ResultPage";
-import MainComponent from "./components/MainComponent";
+import {BrowserRouter, Redirect} from "react-router-dom";
+import MainComponent from "./components/MainComponent/MainComponent";
 
 
 

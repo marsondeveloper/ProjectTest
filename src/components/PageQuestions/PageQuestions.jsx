@@ -1,11 +1,9 @@
 import React, {Component} from "react";
-import TextInput from "./TextInput";
-import RadioButton from "./RadioButton";
-import Modal from "../modalWindow/ModalWindow";
-import "../modalWindow/Button.css";
-import Checkbox from "./Checkbox";
-import Select from "./Select";
-import RadioButton2 from "./RadioButton2";
+import TextInput from "../AnswersComponents/TextInput";
+import RadioButton from "../AnswersComponents/RadioButton";
+import Modal from "../ModalWindow/ModalWindow";
+import Checkbox from "../AnswersComponents/Checkbox";
+import Select from "../AnswersComponents/Select";
 import {Redirect} from "react-router-dom";
 
 
@@ -33,8 +31,6 @@ class PageQuestions extends Component {
                 <Checkbox checkbox={e.checkbox} index={i} addPointCheckbox={this.addPointCheckbox}/>
 
                 <Select select={e.select} index={i} correctAnswer={e.correctAnswer} addPoint={this.props.addPoint}/>
-
-                <RadioButton2 radiobutton2={e.radiobutton2} index={i} addPoint={this.props.addPoint}/>
             </div>
         );
     render() {
