@@ -35,14 +35,14 @@ class MainComponent extends React.Component {
        };
     result = () => {
         let filterPoints = this.state.points.filter((value) => value !== undefined);
-        filterPoints.length === 5 ? this.redirectPageResult() : this.setIsOpenModal();
+        filterPoints.length === this.data.length ? this.redirectPageResult() : this.setIsOpenModal();
         };
     setIsCloseModal = () => {
         this.setState({
             isOpen: false
         })
     };
-    data = [{question: 'В каком году до нашей эры построили пирамиду Хеопса?', input: {text: '2560', right: 1}},
+    data = [{question: 'В каком году до нашей эры построили пирамиду Хеопса?', input: {text: '2560'}},
         {
             question: 'Где была построена самая длинная стена в мире?',
             radiobutton: [{answer: 'В Китае', bal: 1}, {answer: 'В Украине', bal: 0}, {
@@ -69,7 +69,8 @@ class MainComponent extends React.Component {
                 answer: 'Помпеи',
                 bal: 1
             }, {answer: 'Мессина', bal: 0}, {answer: 'Рим', bal: 0}]
-        }];
+        },
+        {question: 'В каком году был образован СССР?', input: {text: '1922'}}];
     render(){
         return(
             <div>
