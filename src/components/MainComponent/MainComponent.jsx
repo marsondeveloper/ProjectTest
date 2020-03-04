@@ -2,7 +2,7 @@ import React from 'react';
 import PageQuestions from "../PageQuestions/PageQuestions";
 import {Route} from "react-router-dom";
 import ResultPage from "../ResultPage/ResultPage";
-import dataJson from "../JSON/tsconfig"
+import dataJson from "../../JSON/tsconfig"
 
 
 class MainComponent extends React.Component {

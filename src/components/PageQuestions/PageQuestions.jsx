@@ -5,7 +5,7 @@ import Modal from "../ModalWindow/ModalWindow";
 import Checkbox from "../AnswersComponents/Checkbox";
 import Select from "../AnswersComponents/Select";
 import {Redirect} from "react-router-dom";
-import dataJson from "../JSON/tsconfig"
+import dataJson from "../../JSON/tsconfig"
 
 class PageQuestions extends Component {
 
