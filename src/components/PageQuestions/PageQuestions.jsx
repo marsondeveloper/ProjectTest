@@ -5,7 +5,7 @@ import Modal from "../ModalWindow/ModalWindow";
 import Checkbox from "../AnswersComponents/Checkbox";
 import Select from "../AnswersComponents/Select";
 import {Redirect} from "react-router-dom";
-import dataJson from "../../JSON/tsconfig"
+import dataJson from "../../JSON/tsconfig";
 
 class PageQuestions extends Component {
 
@@ -22,11 +22,12 @@ class PageQuestions extends Component {
             this.props.addPoint(index, point)
         };
 
+
          questions = dataJson.data.map((e, i) => <div key={i} className="container">
-                <strong>{i+1+"."}{e.question}</strong>
+                <strong>{++i+"."}{e.question}</strong>
                 <TextInput addPoint={this.props.addPoint} index={i} input={e.input}/>
 
-                <RadioButton radiobutton={e.radiobutton} index={i} addPoint={this.props.addPoint}/>
+                <RadioButton radio={e.radio} index={i} addPoint={this.props.addPoint}/>
 
                 <Checkbox checkbox={e.checkbox} index={i} addPointCheckbox={this.addPointCheckbox}/>
 
@@ -43,7 +44,7 @@ class PageQuestions extends Component {
                 <div className="container">
                     <button className='btn' onClick={this.props.result}>Ответить</button>
                 </div>
-                <Modal isOpen={this.props.state.isOpen} setIsCloseModal={this.props.setIsCloseModal}/>
+                <Modal isOpenModal={this.props.state.isOpenModal} setIsCloseModal={this.props.setIsCloseModal}/>
             </div>
         )
     }

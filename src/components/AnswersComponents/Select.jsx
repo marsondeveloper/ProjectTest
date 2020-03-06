@@ -1,40 +1,37 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 
 
 
-class Select extends Component {
-    state = {
-        select: ''
-    };
+const Select = (props) => {
 
-    onChangeSelect = (e, correctAnswer) => {
-        const {name, value} = e.target;
-        this.setState({
-            [name]: value
-        });
+    const [select, setSelect] = useState('');
+
+   let onChangeSelect = ({target: {value}}, correctAnswer) => {
+        setSelect([value]);
         let point = value === correctAnswer ? 1 : 0;
-        this.props.addPoint(this.props.index, point)
+            props.addPoint(props.index, point)
     };
 
-    onChange = (e) => {
-        this.onChangeSelect(e, this.props.correctAnswer)
+   let onChange = (e) => {
+        onChangeSelect(e, props.correctAnswer)
     };
-    render() {
-        if (!this.props.select) {
+
+        if (!props.select) {
             return null
         }
-        let result = this.props.select.map((q, i) => <option key={i} value={q.answer}>{q.answer}</option>);
+
+        let result = props.select.map((q, i) => <option key={i} value={q.answer}>{q.answer}</option>);
         return (
             <div>
                 <div>
-                    <select name="select" value={this.state.select} onChange={this.onChange}>
+                    <select name="select" value={select} onChange={onChange}>
                         {result}
                     </select>
                 </div>
             </div>
         )
-    }
-}
+    };
+
 
 
 export default Select;

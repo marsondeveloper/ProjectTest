@@ -15,7 +15,7 @@ const Checkbox = (props) => {
     }
 
     let result = props.checkbox.map((q, i) => <div key={i}><label><input type="checkbox" name={q.name} value={q.answer}
-                                                                         onChange={(e) => onChangeCheckbox(e, i, q.bal)}/>{q.answer}
+                                                                         onChange={(e) => onChangeCheckbox(e, i, q.point)}/>{q.answer}
     </label><br/></div>);
 
     return (

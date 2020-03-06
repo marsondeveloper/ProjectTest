@@ -10,11 +10,11 @@ const RadioButton = (props) => {
         props.addPoint(props.index, +value)
     };
 
-        if (!props.radiobutton) {
+        if (!props.radio) {
             return null
         }
 
-        let result = props.radiobutton.map((q, i) => <div key={i}><label><input name='radiobutton' type='radio' value={q.bal} onChange={onChangeRadio}/>{q.answer}
+        let result = props.radio.map((q, i) => <div key={i}><label><input name='radiobutton' type='radio' value={q.point} onChange={onChangeRadio}/>{q.answer}
         </label></div>);
         return (
             <div>

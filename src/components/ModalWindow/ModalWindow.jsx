@@ -8,7 +8,7 @@ const Modal = (props) => {
     debugger
     return (
         <>
-            {props.isOpen &&
+            {props.isOpenModal &&
             <div className='modalOverlay'>
                 <div className='modalWindow'>
                     <div className='modalHeader'>

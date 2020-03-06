@@ -10,7 +10,7 @@ class MainComponent extends React.Component {
     state = {
         points: [],
         totalScores: 0,
-        isOpen: false,
+        isOpenModal: false,
         redirect: false
     };
         addPoint = (i, point) => {
@@ -26,7 +26,7 @@ class MainComponent extends React.Component {
         };
        setIsOpenModal = () => {
            this.setState({
-               isOpen: true
+               isOpenModal: true
            });
        };
        redirectPageResult = () => {
@@ -40,7 +40,7 @@ class MainComponent extends React.Component {
         };
     setIsCloseModal = () => {
         this.setState({
-            isOpen: false
+            isOpenModal: false
         })
     };
 

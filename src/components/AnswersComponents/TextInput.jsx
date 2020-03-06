@@ -1,36 +1,31 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 
 
-class TextInput extends Component{
-    state = {
-        textInput: ''
-    };
+const TextInput = (props) => {
 
-    onChangeText = (e, answer) => {
-        const {name, value} = e.target;
-        this.setState({
-            [name]: value
-        });
+    const [textInput, setInput] = useState('');
+
+   let onChangeText = ({target: {value}}, answer) => {
+        setInput([value]);
         const point = value === answer ? 1 : 0;
-        this.props.addPoint(this.props.index, point)
+        props.addPoint(props.index, point)
     };
 
-    onChange = (e) => {
-      this.onChangeText(e, this.props.input.text)
+   let onChange = (e) => {
+      onChangeText(e, props.input.text)
     };
 
-    render() {
-        if (!this.props.input) {
+        if (!props.input) {
             return null
         }
         return (
             <div>
-                <div><p><input placeholder={"Введите ответ"} name="textInput" type="text" value={this.state.textInput}
-                               onChange={this.onChange}/></p></div>
+                <div><p><input placeholder={"Введите ответ"} name="textInput" type="text" value={textInput}
+                               onChange={onChange}/></p></div>
             </div>
         )
-    }
-}
+    };
+
 
 
 export default TextInput;
