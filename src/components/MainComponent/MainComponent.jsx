@@ -48,7 +48,7 @@ class MainComponent extends React.Component {
         return(
             <div>
                 <Route path='/test' render={() => <PageQuestions state={this.state} addPoint={this.addPoint} setIsCloseModal={this.setIsCloseModal} result={this.result}/>}/>
-                <Route path='/result' render={() => <ResultPage state={this.state}/>}/>
+                <Route path='/result' render={() => <ResultPage totalScores={this.state.totalScores}/>}/>
             </div>
         )
     }
