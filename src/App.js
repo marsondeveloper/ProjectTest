@@ -5,7 +5,7 @@ import MainComponent from "./components/MainComponent/MainComponent";
 
 
 
-const App = (props) => {
+const App = () => {
 
         return (
             <BrowserRouter>

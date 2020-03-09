@@ -6,8 +6,8 @@ const Checkbox = (props) => {
 
     let onChangeCheckbox = ({target: {checked}}, i, point) => {
         setChecked([checked]);
-        let check = checked ? point : 0;
-        props.addPointCheckbox(check, i, props.index)
+        let checkpoint = checked ? point : 0;
+        props.addPointCheckbox(checkpoint, i, props.index)
     };
 
     if (!props.checkbox) {

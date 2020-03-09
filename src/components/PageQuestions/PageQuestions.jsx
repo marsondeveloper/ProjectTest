@@ -13,9 +13,9 @@ class PageQuestions extends Component {
         pointsCheckbox: []
     };
 
-    addPointCheckbox = (ball, i, index) => {
+    addPointCheckbox = (checkpoint, i, index) => {
         const arr = [...this.state.pointsCheckbox];
-        arr[i] = ball;
+        arr[i] = checkpoint;
             this.setState({pointsCheckbox: arr}
             );
             let point = arr.reduce((a,currentItem) => typeof currentItem === 'number' ? a + currentItem : a, 0);
