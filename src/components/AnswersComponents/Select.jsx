@@ -6,21 +6,20 @@ const Select = (props) => {
 
     const [select, setSelect] = useState('');
 
-   let onChangeSelect = ({target: {value}}, correctAnswer) => {
+   let onChangeSelect = ({target: {value}}) => {
         setSelect([value]);
-        let point = value === correctAnswer ? 1 : 0;
-            props.addPoint(props.index, point)
+        props.addPoint(props.index, +value)
     };
 
    let onChange = (e) => {
-        onChangeSelect(e, props.correctAnswer)
+        onChangeSelect(e)
     };
 
         if (!props.select) {
             return null
         }
 
-        let result = props.select.map((q, i) => <option key={i} value={q.answer}>{q.answer}</option>);
+        let result = props.select.map((q, i) => <option key={i} value={q.point}>{q.answer}</option>);
         return (
             <div>
                 <div>

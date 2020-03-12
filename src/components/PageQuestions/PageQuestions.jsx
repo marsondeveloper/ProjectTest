@@ -25,20 +25,24 @@ class PageQuestions extends Component {
 
          questions = dataJson.data.map((e, i) => <div key={i} className="container">
                 <strong>{++i+"."}{e.question}</strong>
+
                 <TextInput addPoint={this.props.addPoint} index={i} input={e.input}/>
 
                 <RadioButton radio={e.radio} index={i} addPoint={this.props.addPoint}/>
 
                 <Checkbox checkbox={e.checkbox} index={i} addPointCheckbox={this.addPointCheckbox}/>
 
-                <Select select={e.select} index={i} correctAnswer={e.correctAnswer} addPoint={this.props.addPoint}/>
+                <Select select={e.select} index={i} addPoint={this.props.addPoint}/>
             </div>
         );
+
     render() {
         if (this.props.state.redirect) {
             return <Redirect to={'/result'}/>
         }
+
         return (
+
             <div>
                 {this.questions}
                 <div className="container">
