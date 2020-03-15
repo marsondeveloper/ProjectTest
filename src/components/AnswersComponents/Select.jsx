@@ -15,15 +15,15 @@ const Select = (props) => {
         onChangeSelect(e)
     };
 
-        if (!props.select) {
+        if (props.type !== "select") {
             return null
         }
 
-        let result = props.select.map((q, i) => <option key={i} value={q.point}>{q.answer}</option>);
+        let result = props.answers.map((q, i) => <option key={i} value={q.point}>{q.answer}</option>);
         return (
             <div>
                 <div>
-                    <select name="select" value={select} onChange={onChange}>
+                    <select name={props.type} value={select} onChange={onChange}>
                         {result}
                     </select>
                 </div>

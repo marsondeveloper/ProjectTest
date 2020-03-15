@@ -23,18 +23,20 @@ class PageQuestions extends Component {
         };
 
 
-         questions = dataJson.data.map((e, i) => <div key={i} className="container">
+         questions = dataJson.data.map((e, i) => <div key={i}  className="container">
+
                 <strong>{++i+"."}{e.question}</strong>
 
-                <TextInput addPoint={this.props.addPoint} index={i} input={e.input}/>
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr}/>
 
-                <RadioButton radio={e.radio} index={i} addPoint={this.props.addPoint}/>
+                <RadioButton type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint}/>
 
-                <Checkbox checkbox={e.checkbox} index={i} addPointCheckbox={this.addPointCheckbox}/>
+                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox}/>
 
-                <Select select={e.select} index={i} addPoint={this.props.addPoint}/>
+                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint}/>
             </div>
         );
+         
 
     render() {
         if (this.props.state.redirect) {

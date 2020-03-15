@@ -7,20 +7,20 @@ const TextInput = (props) => {
 
    let onChangeText = ({target: {value}}, answer, cost) => {
         setInput([value]);
-        const point = value === answer ? cost : 0;
-        props.addPoint(props.index, point)
+        const pointText = value === answer ? cost : 0;
+        props.addPoint(props.index, pointText)
     };
 
    let onChange = (e) => {
-      onChangeText(e, props.input.text, props.input.point)
+      onChangeText(e, props.answers[0].answer, props.answers[0].point)
     };
 
-        if (!props.input) {
+        if (props.type !== "text") {
             return null
         }
         return (
             <div>
-                <div><p><input placeholder={"Введите ответ"} name="textInput" type="text" value={textInput}
+                <div><p><input placeholder={"Введите ответ"} name="textInput" type={props.type} value={textInput}
                                onChange={onChange}/></p></div>
             </div>
         )
