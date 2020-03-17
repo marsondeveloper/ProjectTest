@@ -5,7 +5,6 @@ import {NavLink} from "react-router-dom";
 
 
 const Modal = (props) => {
-    debugger
     return (
         <>
             {props.isOpenModal &&
