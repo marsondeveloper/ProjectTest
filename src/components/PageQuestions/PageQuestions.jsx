@@ -27,18 +27,19 @@ class PageQuestions extends Component {
 
                 <strong>{++i+"."}{e.question}</strong>
 
-                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr}/>
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} />
 
-                <RadioButton type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint}/>
+                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
 
-                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox}/>
+                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} />
 
-                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint}/>
+                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
             </div>
         );
          
 
     render() {
+
         if (this.props.state.redirect) {
             return <Redirect to={'/result'}/>
         }

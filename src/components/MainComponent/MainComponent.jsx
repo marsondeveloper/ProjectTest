@@ -11,8 +11,10 @@ class MainComponent extends React.Component {
         points: [],
         totalScores: 0,
         isOpenModal: false,
-        redirect: false
+        redirect: false,
+        storageState: []
     };
+
         addPoint = (i, point) => {
             const arr = [...this.state.points];
             arr[i] =  point;
@@ -47,7 +49,11 @@ class MainComponent extends React.Component {
     render(){
         return(
             <div>
-                <Route path='/test' render={() => <PageQuestions state={this.state} addPoint={this.addPoint} setIsCloseModal={this.setIsCloseModal} result={this.result}/>}/>
+                <Route path='/test' render={() => <PageQuestions state={this.state} addPoint={this.addPoint}
+                                                                 setIsCloseModal={this.setIsCloseModal}
+                                                                 result={this.result}
+                                                                 addInStorageState={this.addInStorageState}/>}/>
+
                 <Route path='/result' render={() => <ResultPage totalScores={this.state.totalScores}/>}/>
             </div>
         )

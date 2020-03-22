@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const Checkbox = (props) => {
 
-    const [checkbox, setChecked] = useState([]);
+    const [box, setChecked] = useState([]);
 
     let onChangeCheckbox = ({target: {checked}}, i, point) => {
         setChecked([checked]);
@@ -14,7 +14,7 @@ const Checkbox = (props) => {
         return null
     }
 
-    let result = props.answers.map((q, i) => <div key={i}><label><input type={props.type} name={q.name} value={q.answer}
+    let result = props.answers.map((q, i) => <div key={i}><label><input type={props.type} name="checkbox" value={q.answer}
                                                                          onChange={(e) => onChangeCheckbox(e, i, q.point)}/>{q.answer}
     </label><br/></div>);
 

@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 const TextInput = (props) => {
 
-    const [textInput, setInput] = useState('');
+    const [textInput, setInput] = useState( '');
 
    let onChangeText = ({target: {value}}, answer, cost) => {
         setInput([value]);
@@ -20,8 +20,10 @@ const TextInput = (props) => {
         }
         return (
             <div>
+
                 <div><p><input placeholder={"Введите ответ"} name="textInput" type={props.type} value={textInput}
                                onChange={onChange}/></p></div>
+
             </div>
         )
     };

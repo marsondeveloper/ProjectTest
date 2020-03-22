@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 const RadioButton = (props) => {
 
-    const [radiobutton, setRadio] = useState('');
+    const [radiobutton, setRadio] = useState( '');
 
    let onChangeRadio = ({target: {value}}) => {
        setRadio([value]);
@@ -14,7 +14,7 @@ const RadioButton = (props) => {
             return null
         }
 
-        let result = props.answers.map((q, i) => <div key={i}><label><input name='radiobutton' type={props.type} value={q.point} onChange={onChangeRadio}/>{q.answer}
+        let result = props.answers.map((q, i) => <div key={i}><label><input name={props.name} type={props.type} value={q.point} onChange={onChangeRadio}/>{q.answer}
         </label></div>);
         return (
             <div>

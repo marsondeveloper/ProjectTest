@@ -23,7 +23,7 @@ const Select = (props) => {
         return (
             <div>
                 <div>
-                    <select name={props.type} value={select} onChange={onChange}>
+                    <select name="select" value={select} onChange={onChange}>
                         {result}
                     </select>
                 </div>
