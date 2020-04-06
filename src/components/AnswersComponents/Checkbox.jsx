@@ -14,7 +14,7 @@ const Checkbox = (props) => {
         return null
     }
 
-    let result = props.answers.map((q, i) => <div key={i}><label><input type={props.type} name={q.name} value={q.answer}
+    let result = props.answers.map((q, i) => <div key={q.id}><label><input type={props.type} name={q.name} value={q.answer}
                                                                          onChange={(e) => onChangeCheckbox(e, i, q.point)}/>{q.answer}
     </label><br/></div>);
 
