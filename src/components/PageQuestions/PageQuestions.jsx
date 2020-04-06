@@ -23,7 +23,7 @@ class PageQuestions extends Component {
         };
 
 
-         questions = dataJson.data.map((e, i) => <div key={i}  className="container">
+         questions = dataJson.data.map((e, i) => <div key={e.id}  className="container">
 
                 <strong>{++i+"."}{e.question}</strong>
 
