@@ -1,5 +1,5 @@
 {
-  "data": [{"question": "В каком году до нашей эры построили пирамиду Хеопса?", "id": 1, "type": "text", "answersArr": [{"answer": "2560", "point": 1}]},
+  "data": [{"question": "В каком году до нашей эры построили пирамиду Хеопса?", "id": 1, "type": "text", "answersArr": [{"answer": "2560", "point": 1, "id": 11}]},
   {
     "question": "Где была построена самая длинная стена в мире?", "id": 2,
     "type": "radio", "name": "radio1",
@@ -28,6 +28,6 @@
       "answer": "Помпеи", "point": 1, "id": 62
     }, {"answer": "Мессина", "point": 0, "id": 63}, {"answer": "Рим", "point": 0, "id": 64}]
   },
-  {"question": "В каком году был образован СССР?", "id": 7, "type": "text", "answersArr": [{"answer": "1922", "point": 1}]}]
+  {"question": "В каком году был образован СССР?", "id": 7, "type": "text", "answersArr": [{"answer": "1922", "point": 1, "id": "7"}]}]
 }
 
