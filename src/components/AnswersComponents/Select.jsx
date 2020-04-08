@@ -8,7 +8,7 @@ const Select = (props) => {
 
    let onChangeSelect = ({target: {value}}) => {
         setSelect([value]);
-        props.addPoint(props.index, +value)
+        props.addPoint(props.index, parseInt(value))
     };
 
    let onChange = (e) => {
@@ -19,7 +19,7 @@ const Select = (props) => {
             return null
         }
 
-        let result = props.answers.map(q => <option key={q.id} value={q.point}>{q.answer}</option>);
+        let result = props.answers.map(q => <option key={q.id} value={[q.point, q.answer]}>{q.answer}</option>);
         return (
             <div>
                 <div>
