@@ -1,17 +1,13 @@
-import React, {useState, useMemo} from "react";
+import React, {useState} from "react";
 
 
 
 const Select = (props) => {
 
-    const [select, setSelect] = useState(props.user || '');
+    const [select, setSelect] = useState( '');
 
-    /*useMemo(()=> setSelect(props.user), [props.user]);*/
 
    let onChangeSelect = ({target: {value}}) => {
-debugger;
-
-       props.addStateUser(props.index, value);
         setSelect([value]);
         props.addPoint(props.index, parseInt(value))
     };
@@ -19,7 +15,6 @@ debugger;
 
 
    let onChange = (e) => {
-       debugger
         onChangeSelect(e)
     };
 

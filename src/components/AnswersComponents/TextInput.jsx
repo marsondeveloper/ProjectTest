@@ -1,15 +1,14 @@
-import React, {useState, useMemo} from "react";
+import React, {useState} from "react";
 
 
 const TextInput = (props) => {
 
-    const [textInput, setInput] = useState( props.user || '');
+    const [textInput, setInput] = useState( '');
 
-    useMemo(()=> setInput(props.user), [props.user]);
+
 
 
    let onChangeText = ({target: {value}}, answer, cost) => {
-       props.addStateUser(props.index, value);
         setInput([value]);
         const pointText = value === answer ? cost : 0;
         props.addPoint(props.index, pointText)
