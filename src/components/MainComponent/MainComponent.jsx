@@ -7,12 +7,28 @@ import dataJson from "../../JSON/tsconfig"
 
 class MainComponent extends React.Component {
 
+
     state = {
         points: [],
         totalScores: 0,
         isOpenModal: false,
         redirect: false,
         storageState: []
+    };
+
+
+
+
+componentDidMount() {
+    let user = localStorage.getItem('usersState');
+    this.setState({storageState: JSON.parse(user)});
+}
+
+
+    addStateUser = (i, value) => {
+        const arr = [...this.state.storageState];
+        arr[i] = value;
+        localStorage.setItem('usersState', JSON.stringify(arr));
     };
 
         addPoint = (i, point) => {
@@ -52,7 +68,7 @@ class MainComponent extends React.Component {
                 <Route path='/test' render={() => <PageQuestions state={this.state} addPoint={this.addPoint}
                                                                  setIsCloseModal={this.setIsCloseModal}
                                                                  result={this.result}
-                                                                 addInStorageState={this.addInStorageState}/>}/>
+                                                                 addStateUser={this.addStateUser}/>}/>
 
                 <Route path='/result' render={() => <ResultPage totalScores={this.state.totalScores}/>}/>
             </div>

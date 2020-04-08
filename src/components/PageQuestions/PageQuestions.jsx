@@ -23,11 +23,11 @@ class PageQuestions extends Component {
         };
 
 
-         questions = dataJson.data.map((e, i) => <div key={i}  className="container">
+         /*questions = dataJson.data.map((e, i) => <div key={i}  className="container">
 
                 <strong>{++i+"."}{e.question}</strong>
 
-                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} />
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} user={this.props.state.storageState} addStateUser={this.props.addStateUser}/>
 
                 <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
 
@@ -35,7 +35,7 @@ class PageQuestions extends Component {
 
                 <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
             </div>
-        );
+        );*/
          
 
     render() {
@@ -47,8 +47,20 @@ class PageQuestions extends Component {
         return (
 
             <div>
-                {this.questions}
+                {dataJson.data.map((e, i) => <div key={e.id}  className="container">
+
+                    <strong>{++i+"."}{e.question}</strong>
+
+                    <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} user={this.props.state.storageState[i]} addStateUser={this.props.addStateUser}/>
+
+                    <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint} user={this.props.state.storageState[i]} addStateUser={this.props.addStateUser} />
+
+                    <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} user={this.props.state.storageState[i]} addStateUser={this.props.addStateUser}/>
+
+                    <Select type={e.type} answers={e.answersArr} index={i} points={e.answersArr.point} addPoint={this.props.addPoint} user={this.props.state.storageState[i]} addStateUser={this.props.addStateUser}/>
+                </div>)}
                 <div className="container">
+
                     <button className='btn' onClick={this.props.result}>Ответить</button>
                 </div>
                 <Modal isOpenModal={this.props.state.isOpenModal} setIsCloseModal={this.props.setIsCloseModal}/>
