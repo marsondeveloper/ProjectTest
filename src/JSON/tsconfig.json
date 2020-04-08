@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  {
+=======
+{
+>>>>>>> d09f741a9b910e7e70cfd871cf964fc8eb2c8c49
   "data": [{"question": "В каком году до нашей эры построили пирамиду Хеопса?", "id": 1, "type": "text", "answersArr": [{"answer": "2560", "point": 1, "id": 11}]},
   {
     "question": "Где была построена самая длинная стена в мире?", "id": 2,
@@ -28,7 +32,10 @@
       "answer": "Помпеи", "point": 1, "id": 62
     }, {"answer": "Мессина", "point": 0, "id": 63}, {"answer": "Рим", "point": 0, "id": 64}]
   },
+<<<<<<< HEAD
   {"question": "В каком году был образован СССР?", "id": 7, "type": "text", "answersArr": [{"answer": "1922", "point": 1, "id": 77}]}]
+=======
+  {"question": "В каком году был образован СССР?", "id": 7, "type": "text", "answersArr": [{"answer": "1922", "point": 1, "id": "7"}]}]
+>>>>>>> d09f741a9b910e7e70cfd871cf964fc8eb2c8c49
 }
-
 

@@ -22,7 +22,11 @@ const Select = (props) => {
             return null
         }
 
+<<<<<<< HEAD
         let result = props.answers.map((q, i) => <option key={q.id} value={[q.point, q.answer]}>{q.answer}</option>);
+=======
+        let result = props.answers.map(q => <option key={q.id} value={[q.point, q.answer]}>{q.answer}</option>);
+>>>>>>> d09f741a9b910e7e70cfd871cf964fc8eb2c8c49
         return (
             <div>
                 <div>
