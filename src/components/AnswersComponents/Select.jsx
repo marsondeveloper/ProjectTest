@@ -8,7 +8,7 @@ const Select = (props) => {
 
 
    let onChangeSelect = ({target: {value}}) => {
-        setSelect([value]);
+        setSelect(value);
         props.addPoint(props.index, parseInt(value))
     };
 

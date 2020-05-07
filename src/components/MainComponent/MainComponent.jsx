@@ -17,20 +17,6 @@ class MainComponent extends React.Component {
     };
 
 
-
-
-componentDidMount() {
-    let user = localStorage.getItem('usersState');
-    this.setState({storageState: JSON.parse(user)});
-}
-
-
-    addStateUser = (i, value) => {
-        const arr = [...this.state.storageState];
-        arr[i] = value;
-        localStorage.setItem('usersState', JSON.stringify(arr));
-    };
-
         addPoint = (i, point) => {
             const arr = [...this.state.points];
             arr[i] =  point;
@@ -67,8 +53,7 @@ componentDidMount() {
             <div>
                 <Route path='/test' render={() => <PageQuestions state={this.state} addPoint={this.addPoint}
                                                                  setIsCloseModal={this.setIsCloseModal}
-                                                                 result={this.result}
-                                                                 addStateUser={this.addStateUser}/>}/>
+                                                                 result={this.result} />} />
 
                 <Route path='/result' render={() => <ResultPage totalScores={this.state.totalScores}/>}/>
             </div>

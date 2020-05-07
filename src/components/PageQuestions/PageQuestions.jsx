@@ -27,7 +27,7 @@ class PageQuestions extends Component {
 
                 <strong>{++i+"."}{e.question}</strong>
 
-                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} user={this.props.state.storageState} addStateUser={this.props.addStateUser}/>
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr}  />
 
                 <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
 

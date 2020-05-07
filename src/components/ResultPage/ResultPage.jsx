@@ -10,8 +10,8 @@ const ResultPage = (props) => {
 
         return (
             <div>
-                {props.totalScores === 7 ? <div className={"win"}><p>{"Тест пройден"}</p><br/>{props.totalScores + " баллов"}</div> :
-                    <div><div className={"test"}><p>{"Тест не пройден "}</p><br/>{"Ваш результат - " + props.totalScores + " из 7"}</div><div><h2>{"Правильные ответы:"}</h2>{rightAnswers}</div></div>}
+                {props.totalScores === rightAnswers.length ? <div className={"win"}><p>{"Тест пройден"}</p><br/>{"Вы ответили правильно на все вопросы!"}</div> :
+                    <div><div className={"test"}><p>{"Тест не пройден "}</p><br/>{"Ваш результат - " + props.totalScores + " из " + rightAnswers.length}</div><div><h2>{"Правильные ответы:"}</h2>{rightAnswers}</div></div>}
             </div>
         )
     };
