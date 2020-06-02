@@ -15,29 +15,13 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d934447-5520-4260-b73a-eb87d6379129" name="Default Changelist" comment="resultPage">
+    <list default="true" id="6d934447-5520-4260-b73a-eb87d6379129" name="Default Changelist" comment="07.05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/Select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/Select.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/MainComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/MainComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +148,23 @@
       <workItem from="1587807759465" duration="279000" />
       <workItem from="1587911384993" duration="199000" />
       <workItem from="1588782801923" duration="775000" />
-      <workItem from="1588840160665" duration="1829000" />
+      <workItem from="1588840160665" duration="2775000" />
+      <workItem from="1589102043455" duration="29000" />
+      <workItem from="1589873187623" duration="2379000" />
+      <workItem from="1589905427402" duration="12551000" />
+      <workItem from="1589958063963" duration="1331000" />
+      <workItem from="1589990017965" duration="6533000" />
+      <workItem from="1590084579037" duration="4029000" />
+      <workItem from="1590163161000" duration="7354000" />
+      <workItem from="1590255636391" duration="3744000" />
+      <workItem from="1590605365804" duration="63000" />
+      <workItem from="1590605445299" duration="1441000" />
+      <workItem from="1590615844942" duration="194000" />
+      <workItem from="1590616120702" duration="69000" />
+      <workItem from="1590616297600" duration="18000" />
+      <workItem from="1590653318852" duration="24000" />
+      <workItem from="1590654135147" duration="90000" />
+      <workItem from="1590736733587" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="hook">
       <created>1583056373687</created>
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587911560421</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="07.05">
+      <created>1588842296421</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588842296421</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,24 +284,29 @@
     <MESSAGE value="commit update-project" />
     <MESSAGE value="commit update-project1" />
     <MESSAGE value="resultPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="resultPage" />
+    <MESSAGE value="07.05" />
+    <option name="LAST_COMMIT_MESSAGE" value="07.05" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1588840573530">
+    <state x="580" y="224" key="FileChooserDialogImpl" timestamp="1590605436377">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.40.1600.860@0.40.1600.860" timestamp="1588840573530" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1588840573530">
+    <state x="580" y="224" key="FileChooserDialogImpl/0.40.1600.860@0.40.1600.860" timestamp="1590605436377" />
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1588842946371">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.40.1600.860@0.40.1600.860" timestamp="1588840573530" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1588840573529">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.40.1600.860@0.40.1600.860" timestamp="1588842946371" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1588842946370">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.40.1600.860@0.40.1600.860" timestamp="1588840573529" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1588840573530">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.40.1600.860@0.40.1600.860" timestamp="1588842946370" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1588842946370">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.40.1600.860@0.40.1600.860" timestamp="1588840573530" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.40.1600.860@0.40.1600.860" timestamp="1588842946370" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1588842946371">
+      <screen x="0" y="40" width="1600" height="860" />
+    </state>
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.40.1600.860@0.40.1600.860" timestamp="1588842946371" />
   </component>
 </project>

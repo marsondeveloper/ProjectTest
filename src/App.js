@@ -15,11 +15,12 @@ const App = () => {
                     <div className='app-wrapper-content'>
                         <MainComponent/>
                     </div>
+                    
                 </div>
             </BrowserRouter>
         );
     };
-
+    
 
 
 export default App;

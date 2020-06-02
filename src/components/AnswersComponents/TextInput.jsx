@@ -1,17 +1,16 @@
 import React, {useState} from "react";
 
 
+
 const TextInput = (props) => {
 
     const [textInput, setInput] = useState( '');
 
-
-
-
    let onChangeText = ({target: {value}}, answer, cost) => {
         setInput([value]);
         const pointText = value === answer ? cost : 0;
-        props.addPoint(props.index, pointText)
+        props.addPoint(props.index, pointText);
+        props.addUserAnswers(props.index, value);
     };
 
    let onChange = (e) => {

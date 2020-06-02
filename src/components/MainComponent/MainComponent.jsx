@@ -13,10 +13,14 @@ class MainComponent extends React.Component {
         totalScores: 0,
         isOpenModal: false,
         redirect: false,
-        storageState: []
+        userAnswers: []
     };
 
-
+        addUserAnswers = (i, answer) => {
+            const arr = [...this.state.userAnswers];
+            arr[i] = answer;
+            this.setState({userAnswers: arr})
+        }
         addPoint = (i, point) => {
             const arr = [...this.state.points];
             arr[i] =  point;
@@ -47,15 +51,16 @@ class MainComponent extends React.Component {
             isOpenModal: false
         })
     };
-
     render(){
         return(
             <div>
                 <Route path='/test' render={() => <PageQuestions state={this.state} addPoint={this.addPoint}
                                                                  setIsCloseModal={this.setIsCloseModal}
-                                                                 result={this.result} />} />
+                                                                 result={this.result} 
+                                                                 addUserAnswers={this.addUserAnswers}
+                                                                 clearTheField={this.clearTheField}/>} />
 
-                <Route path='/result' render={() => <ResultPage totalScores={this.state.totalScores}/>}/>
+                <Route path='/result' render={() => <ResultPage rightAnswers={this.rightAnswers} userAnswers={this.state.userAnswers} totalScores={this.state.totalScores}/>}/>
             </div>
         )
     }
