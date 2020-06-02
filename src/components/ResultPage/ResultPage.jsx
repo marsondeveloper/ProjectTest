@@ -15,7 +15,7 @@ let rightAnswers = dataJson.data.map((e,i) => <div key={e.id}><p>{i+1}.&nbsp;{e.
             <div>     
                 {props.totalScores === rightAnswers.length ? <div className={"win"}><p>{"Тест пройден"}</p><br/>{"Вы ответили правильно на все вопросы!"}</div> :
                     <div><div className={"test"}><p>{"Тест не пройден "}</p><br/>{"Вы набрали - " + props.totalScores + " из " + rightAnswers.length + " баллов"}</div>
-                    <div><strong>{"Правильные ответы: "}</strong>{rightAnswers}</div></div>}
+                    <div class={"answers"}><strong>{"Правильные ответы: "}</strong>{rightAnswers}</div></div>}
             </div>
         )
     };
