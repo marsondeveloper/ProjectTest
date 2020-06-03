@@ -6,6 +6,7 @@ import Checkbox from "../AnswersComponents/Checkbox";
 import Select from "../AnswersComponents/Select";
 import {Redirect} from "react-router-dom";
 import dataJson from "../../JSON/tsconfig";
+import '../../App.css';
 
 class PageQuestions extends Component {
     state = {
@@ -21,24 +22,18 @@ class PageQuestions extends Component {
             this.props.addPoint(index, point)
         };
 
-        addUserAnswersCheckbox = (answer, i, index) => {
-            const arr = [...this.state.answersCheckbox];
-            arr[i] = answer;
-            this.setState({answersCheckbox: arr});
-            this.props.addUserAnswers(index, arr);
-        }
 
-         questions = dataJson.data.map((e, i) => <div key={e.id}  className="container">
+         questions = dataJson.data.map((e, i) => <div key={e.id}  className='container'>
 
                 <strong>{++i+"."}{e.question}</strong>
 
-                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} addUserAnswers={this.props.addUserAnswers} />
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} />
 
-                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint} addUserAnswers={this.props.addUserAnswers} />
+                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint}  />
 
-                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} addUserAnswersCheckbox={this.addUserAnswersCheckbox}/>
+                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} />
 
-                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} addUserAnswers={this.props.addUserAnswers}/>
+                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
             </div>
         );
          

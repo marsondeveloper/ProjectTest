@@ -1,0 +1,7 @@
+.input:hover{
+    color: violet
+}
+
+.input:active{
+    color: greenyellow
+}

@@ -6,7 +6,7 @@ import dataJson from "../../JSON/tsconfig";
 const ResultPage = (props) => {
     
 
-let rightAnswers = dataJson.data.map((e,i) => <div key={e.id}><p>{i+1}.&nbsp;{e.question}</p>
+let rightAnswers = dataJson.data.map((e,i) => <div key={e.id}><p>{i+1+"."}&nbsp;{e.question}</p>
                                  {e.answersArr.filter(a => a.point > 0)
                                  .map(e => <ul key={e.id}>{e.answer}</ul>)}</div>);
 

@@ -9,7 +9,6 @@ const Select = (props) => {
    let onChangeSelect = ({target: {value}}) => {
         setSelect(value);
         props.addPoint(props.index, parseInt(value));
-        props.addUserAnswers(props.index, value.slice(2))
     };
 
 
