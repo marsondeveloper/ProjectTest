@@ -21,7 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6d934447-5520-4260-b73a-eb87d6379129" name="Default Changelist" comment="update2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/Checkbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/Checkbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/RadioButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/RadioButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/Select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/Select.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/TextInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/TextInput.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainComponent/MainComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/MainComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageQuestions/PageQuestions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageQuestions/PageQuestions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,6 +173,9 @@
       <workItem from="1590736733587" duration="54000" />
       <workItem from="1591136261918" duration="1067000" />
       <workItem from="1591213217587" duration="1373000" />
+      <workItem from="1591608327091" duration="215000" />
+      <workItem from="1591654437508" duration="31000" />
+      <workItem from="1592166248383" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="hook">
       <created>1583056373687</created>

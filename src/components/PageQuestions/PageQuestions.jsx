@@ -21,19 +21,25 @@ class PageQuestions extends Component {
             let point = arr.reduce((a,currentItem) => typeof currentItem === 'number' ? a + currentItem : a, 0);
             this.props.addPoint(index, point)
         };
+        addAnswerCheckbox = (answer, i, index) => {
+            const arr = [...this.state.answersCheckbox];
+            arr[i] = answer;
+            this.setState({answersCheckbox: arr});
+            this.props.addUserAnswer(index, arr)
+        }
 
 
          questions = dataJson.data.map((e, i) => <div key={e.id}  className='container'>
 
                 <strong>{++i+"."}{e.question}</strong>
 
-                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} />
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} addUserAnswer={this.props.addUserAnswer}/>
 
-                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint}  />
+                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint}  addUserAnswer={this.props.addUserAnswer}/>
 
-                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} />
+                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} addAnswerCheckbox={this.addAnswerCheckbox}/>
 
-                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
+                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} addUserAnswer={this.props.addUserAnswer}/>
             </div>
         );
          
@@ -43,6 +49,7 @@ class PageQuestions extends Component {
             return <Redirect to={'/result'}/>
         }
         return (
+            
             <div>
                 {this.questions}
                 <div className="container">

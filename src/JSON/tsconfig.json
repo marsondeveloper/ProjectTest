@@ -33,8 +33,15 @@
     }, {"answer": "Мессина", "point": 0, "id": 63}, {"answer": "Рим", "point": 0, "id": 64}]
   },
 
-  {"question": "В каком году был образован СССР?", "id": 7, "type": "text", "answersArr": [{"answer": "1922", "point": 1, "id": 77}]}]
+  {"question": "В каком году был образован СССР?", "id": 7, "type": "text", "answersArr": [{"answer": "1922", "point": 1, "id": 77}]}, 
 
-
+  {
+    "question": "Какой город был провозглашён столицей УССР 13 июля 1923 года?", "id": 8,
+    "type": "radio", "name": "radio3",
+    "answersArr": [{"answer": "Житомир", "point": 0, "id": 65}, {"answer": "Лондон", "point": 0, "id": 66}, {
+      "answer": "Харьков",
+      "point": 1, "id": 67
+    }]
+  }]
 }
 
