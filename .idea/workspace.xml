@@ -19,15 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d934447-5520-4260-b73a-eb87d6379129" name="Default Changelist" comment="update2">
+    <list default="true" id="6d934447-5520-4260-b73a-eb87d6379129" name="Default Changelist" comment="q">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/Checkbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/Checkbox.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/RadioButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/RadioButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/Select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/Select.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AnswersComponents/TextInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AnswersComponents/TextInput.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/MainComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/MainComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageQuestions/PageQuestions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageQuestions/PageQuestions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ResultPage/ResultPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +60,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../TestProjects/launches-past" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -82,7 +75,17 @@
       <recent name="M:\Test-Project\mini-progect\testing\src\components\Answers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.deploy">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -96,6 +99,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +180,8 @@
       <workItem from="1591608327091" duration="215000" />
       <workItem from="1591654437508" duration="31000" />
       <workItem from="1592166248383" duration="35000" />
+      <workItem from="1597154287377" duration="1485000" />
+      <workItem from="1597498219287" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="hook">
       <created>1583056373687</created>
@@ -282,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591137201143</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="q">
+      <created>1597154413637</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597154413638</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,28 +325,29 @@
     <MESSAGE value="07.05" />
     <MESSAGE value="update" />
     <MESSAGE value="update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update2" />
+    <MESSAGE value="q" />
+    <option name="LAST_COMMIT_MESSAGE" value="q" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="224" key="FileChooserDialogImpl" timestamp="1590605436377">
+    <state x="580" y="224" key="FileChooserDialogImpl" timestamp="1597498271832">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state x="580" y="224" key="FileChooserDialogImpl/0.40.1600.860@0.40.1600.860" timestamp="1590605436377" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1591137340225">
+    <state x="580" y="224" key="FileChooserDialogImpl/0.40.1600.860@0.40.1600.860" timestamp="1597498271832" />
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1597155911662">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.40.1600.860@0.40.1600.860" timestamp="1591137340225" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1591137340224">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1597155911662">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.40.1600.860@0.40.1600.860" timestamp="1591137340224" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1591137340224">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1597155911662">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.40.1600.860@0.40.1600.860" timestamp="1591137340224" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1591137340225">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1597155911662">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.40.1600.860@0.40.1600.860" timestamp="1591137340225" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
   </component>
 </project>

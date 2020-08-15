@@ -10,7 +10,6 @@ const TextInput = (props) => {
         setInput([value]);
         const pointText = value === answer ? cost : 0;
         props.addPoint(props.index, pointText);
-        debugger
         props.addUserAnswer(props.index, value)
     };
 
