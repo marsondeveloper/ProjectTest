@@ -59,7 +59,7 @@ class MainComponent extends React.Component {
                                                                  addUserAnswer={this.addUserAnswer}
                                                                  />} />
 
-                <Route path='/result' render={() => <ResultPage points={this.state.points} userAnswers={this.state.userAnswers} totalScores={this.state.totalScores}/>}/>
+                <Route path='/result' render={() => <ResultPage points={this.state.points} totalScores={this.state.totalScores}/>}/>
             </div>
         )
     }

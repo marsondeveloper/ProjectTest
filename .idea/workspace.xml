@@ -98,8 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.deploy" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +182,8 @@
       <workItem from="1592166248383" duration="35000" />
       <workItem from="1597154287377" duration="1485000" />
       <workItem from="1597498219287" duration="55000" />
+      <workItem from="1597521899163" duration="207000" />
+      <workItem from="1597790283026" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="hook">
       <created>1583056373687</created>
@@ -295,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597154413638</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="q">
+      <created>1597522028619</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597522028619</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,25 +338,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="q" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="224" key="FileChooserDialogImpl" timestamp="1597498271832">
+    <state x="580" y="224" key="FileChooserDialogImpl" timestamp="1597790346763">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state x="580" y="224" key="FileChooserDialogImpl/0.40.1600.860@0.40.1600.860" timestamp="1597498271832" />
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1597155911662">
+    <state x="580" y="224" key="FileChooserDialogImpl/0.40.1600.860@0.40.1600.860" timestamp="1597790346763" />
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom" timestamp="1597790329092">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
-    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1597155911662">
+    <state width="1579" height="222" key="GridCell.Tab.0.bottom/0.40.1600.860@0.40.1600.860" timestamp="1597790329092" />
+    <state width="1579" height="222" key="GridCell.Tab.0.center" timestamp="1597790329091">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.center/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
-    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1597155911662">
+    <state width="1579" height="222" key="GridCell.Tab.0.center/0.40.1600.860@0.40.1600.860" timestamp="1597790329091" />
+    <state width="1579" height="222" key="GridCell.Tab.0.left" timestamp="1597790329091">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.left/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
-    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1597155911662">
+    <state width="1579" height="222" key="GridCell.Tab.0.left/0.40.1600.860@0.40.1600.860" timestamp="1597790329091" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right" timestamp="1597790329092">
       <screen x="0" y="40" width="1600" height="860" />
     </state>
-    <state width="1579" height="222" key="GridCell.Tab.0.right/0.40.1600.860@0.40.1600.860" timestamp="1597155911662" />
+    <state width="1579" height="222" key="GridCell.Tab.0.right/0.40.1600.860@0.40.1600.860" timestamp="1597790329092" />
   </component>
 </project>
