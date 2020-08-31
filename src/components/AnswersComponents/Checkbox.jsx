@@ -9,7 +9,6 @@ const Checkbox = (props) => {
         setChecked([checked]);
         let checkpoint = checked ? point : 0;
         props.addPointCheckbox(checkpoint, i, props.index);
-        props.addAnswerCheckbox((checked ? answer : undefined), i, props.index)
     };
 
     if (props.type !== "checkbox") {

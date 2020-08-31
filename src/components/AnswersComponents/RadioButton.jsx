@@ -8,7 +8,6 @@ const RadioButton = (props) => {
    let onChangeRadio = ({target: {value}}, answer) => {
        setRadio([value]);
         props.addPoint(props.index, +value)
-        props.addUserAnswer(props.index, answer)
     };
 
         if (props.type !== "radio") {

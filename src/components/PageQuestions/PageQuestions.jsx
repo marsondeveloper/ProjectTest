@@ -10,8 +10,7 @@ import '../../App.css';
 
 class PageQuestions extends Component {
     state = {
-        pointsCheckbox: [],
-        answersCheckbox: []
+        pointsCheckbox: []
     };
     addPointCheckbox = (checkpoint, i, index) => {
         const arr = [...this.state.pointsCheckbox];
@@ -21,26 +20,21 @@ class PageQuestions extends Component {
             let point = arr.reduce((a,currentItem) => typeof currentItem === 'number' ? a + currentItem : a, 0);
             this.props.addPoint(index, point)
         };
-        addAnswerCheckbox = (answer, i, index) => {
-            const arr = [...this.state.answersCheckbox];
-            arr[i] = answer;
-            this.setState({answersCheckbox: arr});
-            this.props.addUserAnswer(index, arr)
-        }
+        
 
 
-         questions = dataJson.data.map((e, i) => <div key={e.id}  className='container'>
+         questions = dataJson.data.map((e, i) => <li key={e.id}  className='container'>
 
-                <strong>{++i+"."}{e.question}</strong>
+             {e.question}
 
-                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} addUserAnswer={this.props.addUserAnswer}/>
+                <TextInput addPoint={this.props.addPoint} index={i} type={e.type} answers={e.answersArr} />
 
-                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint}  addUserAnswer={this.props.addUserAnswer}/>
+                <RadioButton type={e.type} name={e.name} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
 
-                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} addAnswerCheckbox={this.addAnswerCheckbox}/>
+                <Checkbox type={e.type} answers={e.answersArr} index={i} addPointCheckbox={this.addPointCheckbox} />
 
-                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} addUserAnswer={this.props.addUserAnswer}/>
-            </div>
+                <Select type={e.type} answers={e.answersArr} index={i} addPoint={this.props.addPoint} />
+            </li>
         );
          
 
@@ -51,7 +45,7 @@ class PageQuestions extends Component {
         return (
             
             <div>
-                {this.questions}
+                <ol>{this.questions}</ol>
                 <div className="container">
                     <button className='btn' onClick={this.props.result}>Ответить</button>
                 </div>

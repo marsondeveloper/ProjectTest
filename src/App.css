@@ -11,7 +11,7 @@
 .app-wrapper-content {
   grid-area: c;
   width: 1200px;
-  background-color: lightgray;
+  background-color: rgb(255, 252, 46);
   background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
   background-image: -webkit-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
   -webkit-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
@@ -31,7 +31,7 @@
 .header {
   grid-area: h;
   background-size: 50px 50px;
-  background-color: orange;
+  background-color: lightblue;
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
   background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
@@ -40,6 +40,8 @@
 
 .container {
   margin-top: 20px;
+  color: black;
+  
 }
 
 
