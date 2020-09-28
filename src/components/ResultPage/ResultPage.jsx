@@ -5,10 +5,10 @@ import dataJson from "../../JSON/tsconfig";
 
 const ResultPage = (props) => {
     
-let copy = [...dataJson.data];
-copy.forEach((v,i,arr) => props.points[i] == 1 ? delete arr[i] : arr[i]);
+let copyDataJson = [...dataJson.data];
+copyDataJson.forEach((v,i,arr) => props.points[i] == 1 ? delete arr[i] : arr[i]);
 
-let rightAnswers = copy.map((e,i) => <div key={e.id}><p>{i+1+"."}&nbsp;{e.question}</p>
+let rightAnswers = copyDataJson.map((e,i) => <div key={e.id}><p>{i+1+"."}&nbsp;{e.question}</p>
                                  {e.answersArr.filter(a => a.point > 0)
                                  .map(e => <ul key={e.id}>{e.answer}</ul>)}</div>);
 

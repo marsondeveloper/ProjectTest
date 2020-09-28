@@ -36,8 +36,8 @@ class MainComponent extends React.Component {
            });
        };
     result = () => {
-        let filterPoints = this.state.points.filter((value) => value !== undefined);
-        filterPoints.length === dataJson.data.length ? this.redirectPageResult() : this.setIsOpenModal();
+        let filterPointsForModalW = this.state.points.filter((value) => value !== undefined);
+        filterPointsForModalW.length === dataJson.data.length ? this.redirectPageResult() : this.setIsOpenModal();
         };
     setIsCloseModal = () => {
         this.setState({
